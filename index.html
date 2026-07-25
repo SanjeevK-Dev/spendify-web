@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spendify — Track expenses by voice, in any language</title>
+<meta name="description" content="Spendify is an expense tracker built for everyone. Add expenses by speaking, split bills with groups, and get AI insights. Fully accessible with screen readers.">
+
+<!-- Open Graph tags control how the link looks when shared on WhatsApp,
+     Telegram, Facebook etc. Without these a shared link shows only a bare URL. -->
+<meta property="og:title" content="Spendify — Track expenses by voice">
+<meta property="og:description" content="Add expenses by speaking, split bills with groups, get AI insights. Fully accessible.">
+<meta property="og:type" content="website">
+
+<style>
+  /* Colours match the app's own palette, and every text/background pair here
+     meets the WCAG AA contrast minimum of 4.5:1 — the same standard the app
+     itself was built to. */
+  :root {
+    --bg: #F6F8FA;
+    --surface: #FFFFFF;
+    --text: #1D1C1D;
+    --text-muted: #616061;
+    --primary: #0A66C2;
+    --primary-dark: #084E96;
+    --border: #E1E4E8;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --surface: #1E1E1E;
+      --text: #E3E3E3;
+      --text-muted: #A0A0A0;
+      --primary: #669DF6;
+      --primary-dark: #8AB4F8;
+      --border: #333333;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    /* Never set a fixed px font size on body — it stops the browser's own
+       text-size setting from working, which is exactly the problem the app
+       had. rem scales with the user's preference. */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 24px; }
+
+  /* Lets keyboard users jump straight to the content instead of tabbing
+     through the whole header first. Visible only when focused. */
+  .skip-link {
+    position: absolute; left: -9999px;
+    background: var(--primary); color: #fff;
+    padding: 12px 20px; border-radius: 6px; z-index: 100;
+  }
+  .skip-link:focus { left: 16px; top: 16px; }
+
+  header { text-align: center; padding: 48px 0 32px; }
+  h1 { font-size: 2.2rem; margin: 0 0 12px; line-height: 1.25; }
+  .tagline { font-size: 1.15rem; color: var(--text-muted); margin: 0 0 32px; }
+
+  .cta {
+    display: inline-block;
+    background: var(--primary);
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    /* 48px minimum touch target, same rule the app follows. */
+    min-height: 48px;
+  }
+  .cta:hover { background: var(--primary-dark); }
+  /* A clearly visible focus ring. Removing focus outlines is one of the most
+     common accessibility mistakes on the web. */
+  .cta:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+
+  section { margin: 48px 0; }
+  h2 { font-size: 1.5rem; margin: 0 0 20px; }
+
+  .features { list-style: none; padding: 0; margin: 0; }
+  .features li {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 12px;
+  }
+  .features strong { display: block; margin-bottom: 6px; font-size: 1.05rem; }
+  .features span { color: var(--text-muted); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  footer a { color: var(--primary); }
+  footer a:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="container">
+
+  <header>
+    <h1>Spendify</h1>
+    <p class="tagline">Track your expenses by speaking — in any language.</p>
+    <!-- REPLACE the href below with your real Play Store link once the app is
+         published. It will look like:
+         https://play.google.com/store/apps/details?id=com.sanjeev.spendify -->
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.sanjeev.spendify">
+      Get it on Google Play
+    </a>
+  </header>
+
+  <main id="main">
+
+    <section>
+      <h2>What Spendify does</h2>
+      <ul class="features">
+        <li>
+          <strong>Speak your expenses</strong>
+          <span>Say what you spent and Spendify works out the amount and category for you. It understands English, Hindi, and other languages.</span>
+        </li>
+        <li>
+          <strong>Split bills with groups</strong>
+          <span>Share expenses with family, flatmates or friends. Spendify works out who owes what, and settles up over UPI.</span>
+        </li>
+        <li>
+          <strong>Budgets that make sense</strong>
+          <span>Set a monthly limit, carry unspent money forward, and get a warning before your cycle ends.</span>
+        </li>
+        <li>
+          <strong>Ask questions in plain language</strong>
+          <span>"Where did I spend the most?" — ask by typing or speaking, and hear the answer read back to you.</span>
+        </li>
+        <li>
+          <strong>Built to be accessible</strong>
+          <span>Full screen reader support, adjustable text size, and a dark mode. Every control is properly labelled and sized.</span>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      &nbsp;&middot;&nbsp;
+      <a href="terms.html">Terms and Conditions</a>
+    </p>
+    <p>Questions or feedback? Email <a href="mailto:quickconnect82@gmail.com">quickconnect82@gmail.com</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
