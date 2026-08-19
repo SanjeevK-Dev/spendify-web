@@ -14,7 +14,8 @@
 (function () {
   var LANGUAGES = [
     { code: 'en', label: 'English', prefix: '' },
-    { code: 'hi', label: 'हिंदी',   prefix: '/hi' }
+    { code: 'hi', label: 'हिंदी',   prefix: '/hi' },
+    { code: 'mr', label: 'मराठी',   prefix: '/mr' }
   ];
 
   function currentLangAndPage() {
