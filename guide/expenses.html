@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adding Expenses — Spendify Guide</title>
-<meta name="description" content="How to add an expense in Spendify by typing or speaking, split a bill, and set up recurring bills.">
+<meta name="description" content="How to add an expense in Spendify by typing, speaking or scanning a receipt, split a bill, and set up recurring bills.">
 <link rel="stylesheet" href="guide.css">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
 
@@ -16,7 +17,7 @@
 <nav class="crumbs"><a href="index.html">User Guide</a> / Adding Expenses</nav>
 
 <h1>Adding Expenses</h1>
-<p class="lead">Typing or speaking an expense, splitting a bill, and setting up bills that repeat.</p>
+<p class="lead">Typing, speaking or scanning a receipt, splitting a bill, and setting up bills that repeat.</p>
 
 <main id="main">
 
@@ -82,6 +83,43 @@
     <strong>Always check what it filled in.</strong> Speech recognition can
     mishear an amount, especially in a noisy place. A quick glance before saving
     avoids a wrong figure sitting in your records.
+  </p>
+</div>
+
+<h2 id="receipt">Scanning a receipt</h2>
+
+<figure class="shot">
+  <img src="img/receipt-scan.png" alt="The receipt scanner reviewing a photographed receipt, showing the items it read broken out one by one.">
+  <figcaption>Spendify reads the receipt and breaks it into item-wise expenses</figcaption>
+</figure>
+
+<p>
+  Instead of typing or speaking each item, point your camera at a paper
+  receipt and let Spendify read it for you.
+</p>
+
+<ol class="steps">
+  <li>Open the <span class="ui">Expense</span> tab and tap the receipt/camera icon.</li>
+  <li>Photograph the receipt. If it's long, you can take more than one photo — Spendify stitches them together.</li>
+  <li>Wait a moment while it reads the receipt.</li>
+  <li>Go through the items it found — each one is broken out separately, so you can fix a wrong price or category before anything is saved.</li>
+  <li>Save.</li>
+</ol>
+
+<div class="note">
+  <p>
+    Receipt Scan works for a personal expense and for a group expense alike —
+    the same scan-and-review flow appears when you're adding an expense inside
+    a group.
+  </p>
+</div>
+
+<div class="warn">
+  <p>
+    <strong>Check the items before saving, the same as with voice.</strong>
+    A crumpled receipt or a faint print can occasionally trip up what gets
+    read — a quick glance catches it before a wrong figure sits in your
+    records.
   </p>
 </div>
 
