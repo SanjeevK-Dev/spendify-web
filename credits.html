@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Credits — Spendify</title>
 <meta name="description" content="The people behind Spendify.">
+<link rel="alternate" hreflang="en" href="https://spendifyex.in/credits.html">
+<link rel="alternate" hreflang="hi" href="https://spendifyex.in/hi/credits.html">
+<link rel="alternate" hreflang="x-default" href="https://spendifyex.in/credits.html">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 <style>
@@ -52,6 +55,17 @@
   ul { padding-left: 22px; }
   li { margin-bottom: 8px; }
   .back { display: inline-block; margin: 40px 0 24px; }
+  .lang-switch {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    font-size: 0.9rem; margin: 0 0 16px; color: var(--text-muted);
+  }
+  .lang-switch select {
+    font: inherit; color: var(--text); background: var(--surface);
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 6px 10px; min-height: 36px;
+  }
+  .lang-switch select:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+  .lang-switch noscript a { color: var(--primary); }
 </style>
 </head>
 <body>
@@ -59,6 +73,12 @@
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <div class="container">
+
+<div class="lang-switch">
+  <label for="langSelect">🌐</label>
+  <select id="langSelect" aria-label="Choose a language"></select>
+  <noscript><a href="/hi/credits.html">हिंदी में पढ़ें</a></noscript>
+</div>
 
 <h1>Credits</h1>
 <p class="intro">The people who built Spendify and helped shape it.</p>
@@ -111,6 +131,9 @@
 <p>
   Found a bug, or have an idea? We would genuinely like to hear it —
   email <a href="mailto:quickconnect82@gmail.com">quickconnect82@gmail.com</a>.
+  If it's specifically an accessibility problem, see our
+  <a href="accessibility.html">Accessibility</a> page for how we like those
+  reported.
 </p>
 
 </main>
@@ -118,6 +141,8 @@
 <p class="back"><a href="index.html">&larr; Back to Spendify</a></p>
 
 </div>
+
+<script src="/lang.js" defer></script>
 
 </body>
 </html>

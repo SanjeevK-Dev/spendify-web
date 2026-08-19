@@ -126,6 +126,30 @@ th { font-weight: 600; }
 
 nav.crumbs { margin: 24px 0 0; font-size: 0.95rem; color: var(--text-muted); }
 
+/* Language switcher shown near the top of every guide page — a dropdown
+   (via lang.js) that jumps to the equivalent page in the chosen language.
+   The <noscript> fallback keeps a plain link working with JavaScript off. */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin: 16px 0 0;
+  color: var(--text-muted);
+}
+.lang-switch select {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  min-height: 36px;
+}
+.lang-switch select:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+.lang-switch noscript a { color: var(--primary); }
+
 footer {
   border-top: 1px solid var(--border);
   margin-top: 48px;

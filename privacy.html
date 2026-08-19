@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Spendify</title>
 <meta name="description" content="How Spendify collects, uses and protects your information.">
+<link rel="alternate" hreflang="en" href="https://spendifyex.in/privacy.html">
+<link rel="alternate" hreflang="hi" href="https://spendifyex.in/hi/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://spendifyex.in/privacy.html">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 <style>
@@ -50,6 +53,17 @@
   }
   th { font-weight: 600; }
   .back { display: inline-block; margin: 40px 0 24px; }
+  .lang-switch {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    font-size: 0.9rem; margin: 0 0 16px; color: var(--text-muted);
+  }
+  .lang-switch select {
+    font: inherit; color: var(--text); background: var(--surface);
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 6px 10px; min-height: 36px;
+  }
+  .lang-switch select:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
+  .lang-switch noscript a { color: var(--primary); }
 </style>
 </head>
 <body>
@@ -57,6 +71,12 @@
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <div class="container">
+
+<div class="lang-switch">
+  <label for="langSelect">🌐</label>
+  <select id="langSelect" aria-label="Choose a language"></select>
+  <noscript><a href="/hi/privacy.html">हिंदी में पढ़ें</a></noscript>
+</div>
 
 <h1>Privacy Policy</h1>
 <!-- UPDATE this date whenever you change the policy. -->
@@ -232,7 +252,8 @@
 
 <p>
   See also our <a href="terms.html">Terms and Conditions</a>, which cover
-  subscriptions, groups and payments.
+  subscriptions, groups and payments, and our
+  <a href="accessibility.html">Accessibility</a> page.
 </p>
 
 </main>
@@ -240,6 +261,8 @@
 <p class="back"><a href="index.html">&larr; Back to Spendify</a></p>
 
 </div>
+
+<script src="/lang.js" defer></script>
 
 </body>
 </html>
