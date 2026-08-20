@@ -18,7 +18,8 @@
     { code: 'mr', label: 'मराठी',   prefix: '/mr' },
     { code: 'ta', label: 'தமிழ்',   prefix: '/ta' },
     { code: 'te', label: 'తెలుగు',  prefix: '/te' },
-    { code: 'kn', label: 'ಕನ್ನಡ',   prefix: '/kn' }
+    { code: 'kn', label: 'ಕನ್ನಡ',   prefix: '/kn' },
+    { code: 'bn', label: 'বাংলা',   prefix: '/bn' }
   ];
 
   function currentLangAndPage() {
