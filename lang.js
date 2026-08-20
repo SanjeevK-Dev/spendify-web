@@ -19,7 +19,8 @@
     { code: 'ta', label: 'தமிழ்',   prefix: '/ta' },
     { code: 'te', label: 'తెలుగు',  prefix: '/te' },
     { code: 'kn', label: 'ಕನ್ನಡ',   prefix: '/kn' },
-    { code: 'bn', label: 'বাংলা',   prefix: '/bn' }
+    { code: 'bn', label: 'বাংলা',   prefix: '/bn' },
+    { code: 'gu', label: 'ગુજરાતી', prefix: '/gu' }
   ];
 
   function currentLangAndPage() {
