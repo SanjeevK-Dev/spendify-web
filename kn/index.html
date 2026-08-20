@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
 <title>Spendify — ಯಾವುದೇ ಭಾಷೆಯಲ್ಲಿ ಮಾತನಾಡಿ ಖರ್ಚುಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ</title>
 <meta name="description" content="Spendify ಎಲ್ಲರಿಗೂ ಬಳಸಲು ಸುಲಭವಾಗುವಂತೆ ರೂಪಿಸಿದ ಖರ್ಚು ಟ್ರ್ಯಾಕರ್. ಮಾತನಾಡಿ ಖರ್ಚುಗಳನ್ನು ಸೇರಿಸಿ, ಗ್ರೂಪ್‌ಗಳೊಂದಿಗೆ ಬಿಲ್ ಹಂಚಿಕೊಳ್ಳಿ, AI ಇನ್‌ಸೈಟ್ಸ್ ಪಡೆಯಿರಿ. ಸ್ಕ್ರೀನ್ ರೀಡರ್‌ಗಳೊಂದಿಗೆ ಸಂಪೂರ್ಣವಾಗಿ ಬಳಸಬಹುದು.">
 
@@ -317,20 +318,7 @@
 
 </div>
 
-<script>
-  (function () {
-    var hour = new Date().getHours();
-    var greeting;
-    if (hour < 12) greeting = 'ಶುಭೋದಯ';
-    else if (hour < 17) greeting = 'ಶುಭ ಮಧ್ಯಾಹ್ನ';
-    else greeting = 'ಶುಭ ಸಂಜೆ';
-
-    var el = document.getElementById('greeting');
-    if (!el) return;
-    el.textContent = greeting + ', Spendifyಗೆ ಸ್ವಾಗತ! 👋';
-    el.style.display = 'block';
-  })();
-</script>
+<script src="/greeting.js?v=1" defer></script>
 
 <script src="/lang.js?v=7" defer></script>
 

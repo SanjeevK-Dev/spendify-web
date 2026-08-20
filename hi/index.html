@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
 <title>स्पेंडिफाई — बोलकर अपना खर्च ट्रैक करें, किसी भी भाषा में</title>
 <meta name="description" content="स्पेंडिफाई सबके लिए बना एक खर्च ट्रैकर है। बोलकर खर्च जोड़ें, ग्रुप के साथ बिल बांटें, और AI से जानकारी पाएं। स्क्रीन रीडर के साथ पूरी तरह सुगम्य।">
 
@@ -320,20 +321,7 @@
 
 </div>
 
-<script>
-  (function () {
-    var hour = new Date().getHours();
-    var greeting;
-    if (hour < 12) greeting = 'सुप्रभात';
-    else if (hour < 17) greeting = 'शुभ दोपहर';
-    else greeting = 'शुभ संध्या';
-
-    var el = document.getElementById('greeting');
-    if (!el) return;
-    el.textContent = greeting + ', Spendify में आपका स्वागत है! 👋';
-    el.style.display = 'block';
-  })();
-</script>
+<script src="/greeting.js?v=1" defer></script>
 
 <script src="/lang.js?v=7" defer></script>
 

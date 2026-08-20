@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
 <title>Spendify — Track expenses by voice, in any language</title>
 <meta name="description" content="Spendify is an expense tracker built for everyone. Add expenses by speaking, split bills with groups, and get AI insights. Fully accessible with screen readers.">
 
@@ -358,26 +359,7 @@
 
 </div>
 
-<script>
-  // Time-of-day greeting, based on the VISITOR's own device clock — not the
-  // server's — so someone browsing at 9pm in India sees "evening" even if
-  // the server itself is somewhere else entirely. Runs after the greeting
-  // element already exists in the HTML above, so no DOMContentLoaded wait
-  // is needed; it's a small inline script placed at the end of the body on
-  // purpose, so it never delays anything the visitor is actually reading.
-  (function () {
-    var hour = new Date().getHours();
-    var greeting;
-    if (hour < 12) greeting = 'Good morning';
-    else if (hour < 17) greeting = 'Good afternoon';
-    else greeting = 'Good evening';
-
-    var el = document.getElementById('greeting');
-    if (!el) return;
-    el.textContent = greeting + ', welcome to Spendify! 👋';
-    el.style.display = 'block';
-  })();
-</script>
+<script src="/greeting.js?v=1" defer></script>
 
 <script src="/lang.js?v=7" defer></script>
 

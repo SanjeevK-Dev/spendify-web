@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
 <title>Join a group on Spendify</title>
 <meta name="description" content="You've been invited to a shared expense group on Spendify.">
 <meta name="robots" content="noindex">
@@ -112,26 +113,7 @@
 
 </div>
 
-<script>
-  // Pull the group id out of the link and show it, so a new user can join
-  // manually after installing. Written defensively because this page is
-  // reached from links shared through chat apps, which sometimes mangle URLs.
-  (function () {
-    var el = document.getElementById('groupCode');
-    try {
-      var id = new URLSearchParams(window.location.search).get('groupId');
-      if (id) {
-        // The app's join dialog asks for the 6-character part, adding the
-        // "GRP-" prefix itself, so strip it here to match what it expects.
-        el.textContent = id.replace(/^GRP-/i, '');
-      } else {
-        el.textContent = 'Not found in this link';
-      }
-    } catch (e) {
-      el.textContent = 'Not found in this link';
-    }
-  })();
-</script>
+<script src="/join.js?v=1" defer></script>
 
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
 <title>ஸ்பெண்டிஃபை — எந்த மொழியிலும் பேசி உங்கள் செலவுகளைக் கண்காணிக்கவும்</title>
 <meta name="description" content="ஸ்பெண்டிஃபை என்பது அனைவருக்கும் ஏற்ற செலவு கண்காணிப்பு பயன்பாடு. பேசியே செலவுகளைச் சேர்க்கவும், குழுக்களுடன் பில்களைப் பிரித்துக் கொள்ளவும், AI நுண்ணறிவுகளைப் பெறவும். ஸ்க்ரீன் ரீடர்களுடன் முழுமையாகப் பயன்படுத்தக்கூடியது.">
 
@@ -317,20 +318,7 @@
 
 </div>
 
-<script>
-  (function () {
-    var hour = new Date().getHours();
-    var greeting;
-    if (hour < 12) greeting = 'காலை வணக்கம்';
-    else if (hour < 17) greeting = 'மதிய வணக்கம்';
-    else greeting = 'மாலை வணக்கம்';
-
-    var el = document.getElementById('greeting');
-    if (!el) return;
-    el.textContent = greeting + ', ஸ்பெண்டிஃபைக்கு வரவேற்கிறோம்! 👋';
-    el.style.display = 'block';
-  })();
-</script>
+<script src="/greeting.js?v=1" defer></script>
 
 <script src="/lang.js?v=7" defer></script>
 
